@@ -7,8 +7,9 @@ app.use(express.static('./public'));
 app.get('/', function(req, res) {
 	res.sendfile('./public/index.html');
 });
-app.get('/storytime', function(reg,res){
-res.send("<p>"+ req.query.name+ "nice to meet you! " + req.query.verb+ "this has been an awesome story of "+ req.query.adjective+
+app.get('/storytime', function(req,res){
+res.send("<p>"+ req.query.name+ "nice to meet you! " + req.query.verb
+ + "this has been an awesome story of "+ req.query.adjective +
 ", you are totally welcome</p");	
 });
 app.listen(app.get('port'), function() {
