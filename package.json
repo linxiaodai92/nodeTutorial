@@ -4,12 +4,16 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.11.2",
-    "require": "^2.4.17"
-  }
+    "require": "^2.4.17",
+    "snyk": "^1.437.2"
+  },
+  "snyk": true
 }
